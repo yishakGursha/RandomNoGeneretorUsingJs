@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Random Number Generator</title>
+  <script>
+    function generateRandomNumber() {
+      var min = parseInt(document.getElementById("min").value);
+      var max = parseInt(document.getElementById("max").value);
+
+      // Generate a random number between min and max (inclusive)
+      var randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
+
+      // Display the random number
+      document.getElementById("result").innerText = "Random Number: " + randomNumber;
+    }
+  </script>
+</head>
+<body>
+  <h1>Random Number Generator</h1>
+  <label for="min">Minimum value:</label>
+  <input type="number" id="min" />
+  <br />
+  <label for="max">Maximum value:</label>
+  <input type="number" id="max" />
+  <br />
+  <button onclick="generateRandomNumber()">Generate</button>
+  <p id="result"></p>
+</body>
+</html>
